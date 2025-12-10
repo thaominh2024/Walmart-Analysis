@@ -25,8 +25,10 @@ def main():
     trainer = ModelTrainer()
     trainer.load_data(file_path='data/processed_data.csv')
     trainer.split_data(target_col='weekly_sales') 
-    trainer.auto_run(models_to_try=['linear', 'rf', 'xgboost'], is_optimize=True)
-    trainer.save_model('best_sales_model.pkl')
+    trainer.auto_run(models_to_try=['linear', 'rf', 'xgboost'], do_optimize=True)
+    trainer.plot_feature_importance()
+    trainer.save_model()
+    
     print("============== KẾT THÚC CHƯƠNG TRÌNH ==============")
 if __name__ == "__main__":
     main()

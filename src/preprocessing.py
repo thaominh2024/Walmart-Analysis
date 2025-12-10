@@ -16,8 +16,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class DataPreprocessor:
-
+    """Class tiền xử lý dữ liệu"""
     def __init__(self, file_path: str):
+        # Hàm khởi tạo
         self.file_path = file_path
         self.df = None
         self.scalers = {}

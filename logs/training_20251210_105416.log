@@ -1,0 +1,26 @@
+2025-12-10 10:54:29,723 - INFO - Load Data: data/processed_data.csv | Shape: (6435, 60)
+2025-12-10 10:54:29,733 - INFO - Split Data: Train=(5148, 59), Test=(1287, 59)
+2025-12-10 10:54:29,734 - INFO - --- START AUTO RUN ---
+2025-12-10 10:54:29,734 - INFO - Start Training Default: linear
+2025-12-10 10:54:29,768 - INFO - Training Finished: linear
+2025-12-10 10:54:29,774 - INFO - EVALUATE linear: R2=0.9392 | RMSE=137,788.41 | MAE=91,310.31
+2025-12-10 10:55:32,536 - INFO - Iter 1: Loss (RMSE)=119,178.89 | Rank=3 | Params={'n_estimators': 100, 'min_samples_split': 5, 'max_depth': None}
+2025-12-10 10:55:32,537 - INFO - Iter 2: Loss (RMSE)=116,805.16 | Rank=1 | Params={'n_estimators': 200, 'min_samples_split': 2, 'max_depth': None}
+2025-12-10 10:55:32,538 - INFO - Iter 3: Loss (RMSE)=340,839.61 | Rank=5 | Params={'n_estimators': 100, 'min_samples_split': 2, 'max_depth': 10}
+2025-12-10 10:55:32,538 - INFO - Iter 4: Loss (RMSE)=116,857.97 | Rank=2 | Params={'n_estimators': 100, 'min_samples_split': 2, 'max_depth': None}
+2025-12-10 10:55:32,539 - INFO - Iter 5: Loss (RMSE)=172,728.39 | Rank=4 | Params={'n_estimators': 200, 'min_samples_split': 2, 'max_depth': 20}
+2025-12-10 10:55:32,539 - INFO - DONE rf. Best RMSE: 116,805.16
+2025-12-10 10:55:32,540 - INFO - Best Params: {'n_estimators': 200, 'min_samples_split': 2, 'max_depth': None}
+2025-12-10 10:55:32,645 - INFO - EVALUATE rf: R2=0.9675 | RMSE=100,722.65 | MAE=55,203.19
+2025-12-10 10:55:38,461 - INFO - Iter 1: Loss (RMSE)=328,756.50 | Rank=3 | Params={'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.01}
+2025-12-10 10:55:38,462 - INFO - Iter 2: Loss (RMSE)=94,589.67 | Rank=2 | Params={'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.1}
+2025-12-10 10:55:38,462 - INFO - Iter 3: Loss (RMSE)=473,905.98 | Rank=5 | Params={'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.01}
+2025-12-10 10:55:38,463 - INFO - Iter 4: Loss (RMSE)=89,988.88 | Rank=1 | Params={'n_estimators': 500, 'max_depth': 5, 'learning_rate': 0.1}
+2025-12-10 10:55:38,464 - INFO - Iter 5: Loss (RMSE)=434,900.48 | Rank=4 | Params={'n_estimators': 100, 'max_depth': 5, 'learning_rate': 0.01}
+2025-12-10 10:55:38,464 - INFO - DONE xgboost. Best RMSE: 89,988.88
+2025-12-10 10:55:38,465 - INFO - Best Params: {'n_estimators': 500, 'max_depth': 5, 'learning_rate': 0.1}
+2025-12-10 10:55:38,513 - INFO - EVALUATE xgboost: R2=0.9815 | RMSE=75,995.26 | MAE=46,164.12
+2025-12-10 10:55:38,514 - INFO - === WINNER: xgboost (R2=0.9815) ===
+2025-12-10 10:55:39,059 - INFO - Saved plot: model_comparison.png
+2025-12-10 10:55:39,732 - INFO - Saved Feature Importance plot
+2025-12-10 10:55:39,770 - INFO - Saved Model: output\best_model_xgboost.pkl
